@@ -27,6 +27,10 @@
     <url-pattern>*.jsp</url-pattern>
   </filter-mapping>
 
+  <listener>
+    <listener-class>com.bjpowernode.crm.web.listener.SysInitListener</listener-class>
+  </listener>
+
   <servlet>
     <servlet-name>UserController</servlet-name>
     <servlet-class>com.bjpowernode.crm.settings.web.controller.UserController</servlet-class>
@@ -48,5 +52,23 @@
     <url-pattern>/workbench/activity/delete.do</url-pattern>
     <url-pattern>/workbench/activity/getUserListAndActivity.do</url-pattern>
     <url-pattern>/workbench/activity/update.do</url-pattern>
+    <url-pattern>/workbench/activity/detail.do</url-pattern>
+    <url-pattern>/workbench/activity/getRemarkListByAid.do</url-pattern>
+    <url-pattern>/workbench/activity/deleteRemark.do</url-pattern>
+    <url-pattern>/workbench/activity/saveRemark.do</url-pattern>
+    <url-pattern>/workbench/activity/updateRemark.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ClueController</servlet-name>
+    <servlet-class>com.bjpowernode.crm.workbench.web.controller.ClueController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClueController</servlet-name>
+    <url-pattern>/workbench/clue/getUserList.do</url-pattern>
+    <url-pattern>/workbench/clue/save.do</url-pattern>
+    <url-pattern>/workbench/clue/detail.do</url-pattern>
+    <url-pattern>/workbench/clue/getActivityListByClueId.do</url-pattern>
+    <url-pattern>/workbench/clue/unbund.do</url-pattern>
   </servlet-mapping>
 </web-app>

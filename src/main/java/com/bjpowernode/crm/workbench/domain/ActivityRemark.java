@@ -1,6 +1,7 @@
 package com.bjpowernode.crm.workbench.domain;
 
 public class ActivityRemark {
+    private String id;
     private String noteContent;
     private String createTime;
     private String createBy;
@@ -8,6 +9,14 @@ public class ActivityRemark {
     private String editBy;
     private String editFlag;
     private String activityId;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getNoteContent() {
         return noteContent;

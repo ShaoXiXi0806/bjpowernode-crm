@@ -23,7 +23,7 @@
   </environments>
 
   <mappers>
-    <mapper resource="com/bjpowernode/crm/settings/dao/UserDao.xml" />
+    <package name="com.bjpowernode.crm.settings.dao"/>
     <package name="com.bjpowernode.crm.workbench.dao"/>
   </mappers>
 </configuration>
