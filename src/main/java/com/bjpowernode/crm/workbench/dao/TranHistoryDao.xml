@@ -9,6 +9,10 @@
         insert into tbl_tran_history(id,stage,money,expectedDate,createTime,createBy,tranId)
         values (#{id},#{stage},#{money},#{expectedDate},#{createTime},#{createBy},#{tranId})
     </insert>
+
+    <select id="getHistoryListByTranId" resultType="com.bjpowernode.crm.workbench.domain.TranHistory">
+        select * from tbl_tran_history where tranId=#{tranId}
+    </select>
 </mapper>
 
 
